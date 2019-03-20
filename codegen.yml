@@ -1,0 +1,11 @@
+overwrite: true
+schema: "src/github-schema.graphql"
+documents: "**/*.graphql"
+generates:
+  src/codegen.tsx:
+    config:
+      noNamespaces: true
+    plugins:
+      - "typescript-common"
+      - "typescript-client"
+      - "typescript-react-apollo"

@@ -1,0 +1,17 @@
+query OrganizationByName($login: String!) {
+  organization(login: $login) {
+    id
+    avatarUrl
+    login
+    repositories(first: 10) {
+      nodes {
+        id
+        name
+        somthing
+        stargazers {
+          totalCount
+        }
+      }
+    }
+  }
+}
